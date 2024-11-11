@@ -10,7 +10,7 @@
   display: flex;
   flex-direction: row;
   align-items: flex-start;
-  gap: 125px;
+  justify-content: space-between;
 }
 
 .hero__title {
@@ -25,6 +25,7 @@
 .hero__buttons_wrapper {
   display: flex;
   gap: 23px;
+  z-index: 4;
 }
 
 .hero__button {
@@ -34,7 +35,6 @@
   font-size: 18px;
   font-weight: 600;
   border: none;
-  z-index: 2;
 }
 
 .hero__connect {
@@ -49,7 +49,7 @@
 
 .hero__image_wrapper {
   position: relative;
-  width: 100%;
+  width: 575px;
 }
 
 .hero__image {
@@ -60,16 +60,16 @@
 
 .hero__image_coin {
   position: absolute;
-  top: 15vh;
-  left: 15vh;
+  top: 100px;
+  left: 100px;
   transform: translate(-50%, -50%);
   z-index: 4;
 }
 
 .hero__image_coin2 {
   position: absolute;
-  bottom: -45vh;
-  left: 20vh;
+  bottom: -350px;
+  left: 200px;
   transform: translate(50%, 50%);
   z-index: 2;
 }
@@ -89,16 +89,20 @@
     max-height: 450px;
   }
 
+  .hero__image_wrapper {
+    width: 450px;
+  }
+
   .hero__image_coin {
-    top: 10vh;
-    left: 10vh;
+    top: 100px;
+    left: 100px;
     max-width: 200px;
     max-height: 200px;
   }
 
   .hero__image_coin2 {
-    bottom: -40vh;
-    left: 15vh;
+    bottom: -300px;
+    left: 100px;
     max-width: 200px;
     max-height: 200px;
   }
@@ -110,13 +114,13 @@
 }
 
 @media (max-width: 1024px) {
-  .hero__content {
-    gap: 150px;
-  }
-
   .hero__title {
     font-size: 50px;
     max-width: 300px;
+  }
+
+  .hero__image_wrapper {
+    width: 350px;
   }
 
   .hero__image {
@@ -125,15 +129,15 @@
   }
 
   .hero__image_coin {
-    top: 5vh;
-    left: 10vh;
+    top: 60px;
+    left: 60px;
     max-width: 150px;
     max-height: 150px;
   }
 
   .hero__image_coin2 {
-    bottom: -30vh;
-    left: 10vh;
+    bottom: -200px;
+    left: 110px;
     max-width: 150px;
     max-height: 150px;
   }
@@ -172,15 +176,15 @@
   }
 
   .hero__image_coin {
-    top: 10vh;
-    left: 10vh;
+    top: 60px;
+    left: 60px;
     max-width: 120px;
     max-height: 120px;
   }
 
   .hero__image_coin2 {
-    bottom: 10vh;
-    left: 10vh;
+    bottom: 100px;
+    left: 100px;
     max-width: 120px;
     max-height: 120px;
   }
@@ -207,13 +211,14 @@
   }
 
   .hero__image_coin {
-    left: 8vh;
+    left: 60px;
     max-width: 120px;
     max-height: 120px;
   }
 
   .hero__image_coin2 {
-    left: 12vh;
+    bottom: 100px;
+    left: 80px;
     max-width: 120px;
     max-height: 120px;
   }

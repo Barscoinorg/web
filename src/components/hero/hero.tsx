@@ -3,6 +3,7 @@
 import Image from "next/image";
 import styles from "./hero.module.css";
 import { useTranslations } from "next-intl";
+import { ConnectButtonCustom } from "@/shared/connect-button";
 
 export default function Hero() {
   const t = useTranslations("hero");
@@ -38,9 +39,9 @@ export default function Hero() {
         </div>
       </div>
       <div className={styles.hero__buttons_wrapper}>
-        <button className={`${styles.hero__connect} ${styles.hero__button}`}>
-          {t("buttons.connect")}
-        </button>
+        <ConnectButtonCustom
+          buttonClassName={`${styles.hero__connect} ${styles.hero__button}`}
+        />
         <button className={`${styles.hero__add} ${styles.hero__button}`}>
           {t("buttons.add")}
         </button>
