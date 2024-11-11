@@ -1,12 +1,26 @@
 :root {
   --background: #ffffff;
-  --foreground: #171717;
-}
+  --foreground: #2f2f2f;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  --padding-x: 100px;
+  --padding-y: 10vh;
+
+  /* Медиа-запросы */
+  @media (max-width: 1440px) {
+    --padding-x: 80px;
+  }
+
+  @media (max-width: 1024px) {
+    --padding-x: 60px;
+  }
+
+  @media (max-width: 768px) {
+    --padding-x: 30px;
+    --padding-y: 5vh;
+  }
+
+  @media (max-width: 480px) {
+    --padding-x: 20px;
   }
 }
 
@@ -19,7 +33,7 @@ body {
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-manrope);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -35,8 +49,64 @@ a {
   text-decoration: none;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
+.swiper-pagination {
+  bottom: -70px !important;
+  width: 100% !important;
+}
+
+.swiper-pagination-bullet {
+  background: #d9d9d9 !important;
+  margin: 0 5px !important;
+}
+
+.swiper-pagination-bullet-active {
+  background: #2c4dbb !important;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  position: absolute !important;
+  top: auto !important;
+  bottom: -90px !important;
+  color: #1e1e1e !important;
+  background: #eaeaea !important;
+  width: 60px !important;
+  height: 60px !important;
+  border-radius: 50% !important;
+  margin: 0 !important;
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  font-size: 20px !important;
+  font-weight: bold !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  width: 488px !important;
+}
+
+.swiper-button-prev {
+  left: 30% !important;
+  padding-right: 4px !important;
+}
+
+.swiper-button-next {
+  right: 30% !important;
+  padding-left: 4px !important;
+}
+
+@media (max-width: 480px) {
+  .swiper-button-prev {
+    left: 0% !important;
+  }
+
+  .swiper-button-next {
+    right: 0% !important;
   }
 }

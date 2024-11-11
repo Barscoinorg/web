@@ -1,0 +1,79 @@
+.page {
+  position: relative;
+}
+
+.hero__block {
+  position: relative;
+  height: 100dvh;
+  background: linear-gradient(180deg, #2446b6 0%, #96aeff 100%);
+  overflow: visible;
+  padding: 60px var(--padding-x) 0px;
+}
+
+.page__image_bg {
+  position: absolute;
+  bottom: -400px;
+  left: 15%;
+  transform: translateX(-50%);
+  object-fit: cover;
+  object-position: center bottom;
+  z-index: 1;
+  right: 0;
+  clip-path: inset(0 0 400px 0);
+}
+
+.page__image_bg2 {
+  position: absolute;
+  bottom: -100px;
+  left: 50%;
+  transform: translateX(-50%);
+  object-fit: cover;
+  object-position: center bottom;
+  z-index: 1;
+}
+
+.about__block {
+  padding: calc(var(--padding-y) * 2) var(--padding-x);
+  position: relative;
+  z-index: 2;
+}
+
+.society__block {
+  padding: var(--padding-y) var(--padding-x);
+  position: relative;
+  z-index: 2;
+}
+
+.ecosystem__block {
+  padding: var(--padding-y) var(--padding-x) calc(var(--padding-y) * 2);
+  position: relative;
+  z-index: 2;
+}
+
+.buy__block {
+  padding: var(--padding-y) 0 var(--padding-y) var(--padding-x);
+  position: relative;
+  z-index: 2;
+  overflow: hidden;
+}
+
+.staking__block {
+  padding: var(--padding-y) var(--padding-x);
+  position: relative;
+  z-index: 2;
+}
+
+.footer__block {
+  position: relative;
+  z-index: 2;
+}
+
+@media (max-width: 768px) {
+  .staking__block {
+    padding-bottom: 5vh;
+  }
+
+  .hero__block {
+    padding-top: 20px;
+  }
+}

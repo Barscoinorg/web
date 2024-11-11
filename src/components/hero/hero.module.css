@@ -1,0 +1,220 @@
+.hero {
+  margin-top: 5vh;
+  display: flex;
+  width: 100%;
+  gap: 40px;
+  flex-direction: column;
+}
+
+.hero__content {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 125px;
+}
+
+.hero__title {
+  max-width: 462px;
+  font-size: 86px;
+  line-height: 97%;
+  font-weight: 700;
+  color: #e5f1ff;
+  z-index: 2;
+}
+
+.hero__buttons_wrapper {
+  display: flex;
+  gap: 23px;
+}
+
+.hero__button {
+  cursor: pointer;
+  padding: 22px 41px;
+  border-radius: 50px;
+  font-size: 18px;
+  font-weight: 600;
+  border: none;
+  z-index: 2;
+}
+
+.hero__connect {
+  background-color: #2c4dbb;
+  color: #ffffff;
+}
+
+.hero__add {
+  color: #2c4dbb;
+  background-color: #e5f1ff;
+}
+
+.hero__image_wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.hero__image {
+  position: absolute;
+  top: -5vh;
+  z-index: 3;
+}
+
+.hero__image_coin {
+  position: absolute;
+  top: 15vh;
+  left: 15vh;
+  transform: translate(-50%, -50%);
+  z-index: 4;
+}
+
+.hero__image_coin2 {
+  position: absolute;
+  bottom: -45vh;
+  left: 20vh;
+  transform: translate(50%, 50%);
+  z-index: 2;
+}
+
+@media (max-width: 1280px) {
+  .hero__content {
+    gap: 80px;
+  }
+
+  .hero__title {
+    font-size: 70px;
+    max-width: 400px;
+  }
+
+  .hero__image {
+    max-width: 450px;
+    max-height: 450px;
+  }
+
+  .hero__image_coin {
+    top: 10vh;
+    left: 10vh;
+    max-width: 200px;
+    max-height: 200px;
+  }
+
+  .hero__image_coin2 {
+    bottom: -40vh;
+    left: 15vh;
+    max-width: 200px;
+    max-height: 200px;
+  }
+
+  .hero__button {
+    padding: 16px 30px;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .hero__content {
+    gap: 150px;
+  }
+
+  .hero__title {
+    font-size: 50px;
+    max-width: 300px;
+  }
+
+  .hero__image {
+    max-width: 350px;
+    max-height: 350px;
+  }
+
+  .hero__image_coin {
+    top: 5vh;
+    left: 10vh;
+    max-width: 150px;
+    max-height: 150px;
+  }
+
+  .hero__image_coin2 {
+    bottom: -30vh;
+    left: 10vh;
+    max-width: 150px;
+    max-height: 150px;
+  }
+
+  .hero__button {
+    padding: 14px 25px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    gap: 20px;
+    align-items: center;
+  }
+
+  .hero__content {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .hero__title {
+    text-align: center;
+  }
+
+  .hero__image_wrapper {
+    width: 300px;
+    height: 300px;
+  }
+
+  .hero__image {
+    top: 0;
+    max-width: 300px;
+    max-height: 300px;
+  }
+
+  .hero__image_coin {
+    top: 10vh;
+    left: 10vh;
+    max-width: 120px;
+    max-height: 120px;
+  }
+
+  .hero__image_coin2 {
+    bottom: 10vh;
+    left: 10vh;
+    max-width: 120px;
+    max-height: 120px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero__title {
+    font-size: 44px;
+  }
+
+  .hero__buttons_wrapper {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .hero__image_wrapper {
+    width: 267px;
+    height: 267px;
+  }
+
+  .hero__image {
+    max-width: 267px;
+    max-height: 267px;
+  }
+
+  .hero__image_coin {
+    left: 8vh;
+    max-width: 120px;
+    max-height: 120px;
+  }
+
+  .hero__image_coin2 {
+    left: 12vh;
+    max-width: 120px;
+    max-height: 120px;
+  }
+}

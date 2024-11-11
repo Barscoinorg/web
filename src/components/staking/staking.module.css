@@ -1,0 +1,247 @@
+.staking {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 60px;
+}
+
+.staking__content {
+  flex: 1;
+  width: 50%;
+  max-width: 730px;
+}
+
+.staking__title {
+  font-size: 70px;
+  font-weight: 700;
+  line-height: 97%;
+  margin-bottom: 34px;
+}
+
+.staking__description {
+  font-size: 18px;
+  line-height: 140%;
+  margin-bottom: 34px;
+}
+
+.staking__button {
+  padding: 22px 70px;
+  background: #2c4dbb;
+  color: #fff;
+  border: none;
+  border-radius: 50px;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-bottom: 60px;
+  transition: background 0.2s;
+}
+
+.staking__button:hover {
+  background: #233c96;
+}
+
+.staking__stats {
+  display: flex;
+  gap: 22px;
+}
+
+.staking__stat {
+  padding: 23px;
+  background: #f5f8ff;
+  border-radius: 26px;
+  min-width: 200px;
+}
+
+.staking__stat h3 {
+  font-size: 50px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.staking__stat p {
+  font-size: 17px;
+  font-weight: 500;
+  color: #262626;
+}
+
+.staking__image {
+  width: 50%;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.staking__image img {
+  max-width: 100%;
+  height: auto;
+}
+
+@media (max-width: 1440px) {
+  .staking__title {
+    font-size: 50px;
+  }
+
+  .staking__stat h3 {
+    font-size: 36px;
+  }
+
+  .staking__image img {
+    transform: scale(1);
+  }
+}
+
+@media (max-width: 1280px) {
+  .staking {
+    gap: 40px;
+  }
+  .staking__title {
+    font-size: 40px;
+  }
+
+  .staking__description {
+    font-size: 16px;
+  }
+
+  .staking__button {
+    padding: 18px 50px;
+    font-size: 16px;
+  }
+
+  .staking__stat {
+    padding: 20px;
+  }
+
+  .staking__stat h3 {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .staking {
+    text-align: left;
+    gap: 20px;
+  }
+
+  .staking__content {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .staking__title {
+    width: 100%;
+    max-width: 450px;
+  }
+
+  .staking__stats {
+    justify-content: center;
+  }
+
+  .staking__image {
+    width: 100%;
+  }
+
+  .staking__image img {
+    transform: scale(1);
+  }
+}
+
+@media (max-width: 768px) {
+  .staking {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .staking__title {
+    font-size: 40px;
+    margin-bottom: 20px;
+    max-width: 450px;
+  }
+
+  .staking__description {
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+
+  .staking__button {
+    padding: 16px 40px;
+    font-size: 14px;
+    margin-bottom: 30px;
+  }
+
+  .staking__stats {
+    align-items: center;
+    gap: 15px;
+  }
+
+  .staking__stat {
+    width: 100%;
+  }
+
+  .staking__stat h3 {
+    font-size: 24px;
+    margin-bottom: 5px;
+  }
+
+  .staking__stat p {
+    font-size: 14px;
+  }
+
+  .staking__image {
+    max-width: 100%;
+    padding: 0;
+  }
+
+  .staking__image img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .staking {
+    gap: 15px;
+  }
+
+  .staking__title {
+    font-size: 30px;
+    max-width: 350px;
+  }
+
+  .staking__button {
+    max-width: 100%;
+  }
+
+  .staking__image {
+    padding: 0 10px;
+    margin-top: 40px;
+  }
+
+  .staking__image img {
+    max-width: 320px;
+    height: auto;
+    transform: scale(1);
+  }
+
+  .staking__stat h3 {
+    font-size: 18px;
+  }
+
+  .staking__stat {
+    min-width: 50%;
+  }
+}
+
+@media (max-width: 360px) {
+  .staking__stat h3 {
+    margin-bottom: 5px;
+    font-size: 16px;
+  }
+
+  .staking__title {
+    font-size: 26px;
+    max-width: 300px;
+  }
+}

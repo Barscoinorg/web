@@ -1,0 +1,267 @@
+.about {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.about__container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  width: 50%;
+}
+
+.about__title {
+  font-size: 80px;
+  font-weight: 700;
+  line-height: 97%;
+}
+
+.about__description {
+  max-width: 80%;
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 140%;
+}
+
+.about__image_wrapper {
+  width: 50%;
+}
+
+.about__ellipse {
+  position: relative;
+  max-width: 597px;
+  max-height: 597px;
+  border: 1px solid #d9d9d9;
+  border-radius: 50%;
+}
+
+.about__ellipse_small {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 416px;
+  height: 416px;
+  border: 1px solid #d9d9d9;
+  border-radius: 50%;
+}
+
+.about__add_ellipse {
+  background-color: #2b4bb6;
+  filter: blur(50px);
+}
+
+.about__bars1 {
+  position: absolute;
+  left: 2%;
+  top: 15%;
+}
+
+.about__bars2 {
+  position: absolute;
+  bottom: 20%;
+  right: 7%;
+  z-index: 3;
+}
+
+.about__chart {
+  position: absolute;
+  left: 60%;
+  top: 40%;
+  transform: rotate(-16deg) translate(-50%, -50%);
+}
+
+@media (max-width: 1280px) {
+  .about {
+    gap: 40px;
+  }
+
+  .about__title {
+    font-size: 70px;
+  }
+
+  .about__description {
+    font-size: 20px;
+  }
+
+  .about__ellipse {
+    max-width: 450px;
+    max-height: 450px;
+  }
+
+  .about__ellipse_small {
+    max-width: 300px;
+    max-height: 300px;
+  }
+
+  .about__chart {
+    max-width: 300px;
+    max-height: 300px;
+  }
+
+  .about__bars1 {
+    max-width: 150px;
+    max-height: 150px;
+  }
+
+  .about__bars2 {
+    max-width: 100px;
+    max-height: 100px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .about {
+    gap: 20px;
+  }
+
+  .about__container {
+    gap: 40px;
+  }
+
+  .about__title {
+    max-width: 450px;
+    font-size: 60px;
+  }
+
+  .about__description {
+    max-width: 90%;
+  }
+
+  .about__ellipse {
+    max-width: 400px;
+    max-height: 400px;
+  }
+
+  .about__ellipse_small {
+    max-width: 300px;
+    max-height: 300px;
+  }
+
+  .about__chart {
+    max-width: 250px;
+    max-height: 250px;
+  }
+
+  .about__bars1 {
+    max-width: 120px;
+    max-height: 120px;
+  }
+
+  .about__bars2 {
+    max-width: 100px;
+    max-height: 100px;
+  }
+}
+
+@media (max-width: 768px) {
+  .about {
+    flex-direction: column;
+    gap: 30px;
+    align-items: flex-start;
+  }
+
+  .about__container {
+    width: 100%;
+    gap: 32px;
+  }
+
+  .about__title {
+    font-size: 40px;
+    max-width: 450px;
+  }
+
+  .about__description {
+    font-size: 14px;
+    max-width: 100%;
+  }
+
+  .about__image_wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .about__ellipse {
+    max-width: 400px;
+  }
+}
+
+@media (max-width: 480px) {
+  .about {
+    gap: 20px;
+  }
+
+  .about__container {
+    gap: 20px;
+  }
+
+  .about__title {
+    font-size: 30px;
+    max-width: 350px;
+  }
+
+  .about__description {
+    font-size: 13px;
+  }
+
+  .about__ellipse {
+    max-width: 300px;
+    max-height: 300px;
+  }
+
+  .about__ellipse_small {
+    max-width: 200px;
+    max-height: 200px;
+  }
+
+  .about__chart {
+    max-width: 200px;
+    max-height: 200px;
+  }
+
+  .about__bars1 {
+    max-width: 100px;
+    max-height: 100px;
+  }
+
+  .about__bars2 {
+    max-width: 80px;
+    max-height: 80px;
+  }
+}
+
+@media (max-width: 360px) {
+  .about__title {
+    font-size: 26px;
+    max-width: 250px;
+  }
+
+  .about__ellipse {
+    max-width: 280px;
+    max-height: 280px;
+  }
+
+  .about__ellipse_small {
+    max-width: 180px;
+    max-height: 180px;
+  }
+
+  .about__chart {
+    max-width: 180px;
+    max-height: 180px;
+  }
+
+  .about__bars1 {
+    max-width: 80px;
+    max-height: 80px;
+  }
+
+  .about__bars2 {
+    max-width: 60px;
+    max-height: 60px;
+  }
+}

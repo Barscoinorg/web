@@ -1,0 +1,40 @@
+.slider {
+  position: relative;
+  width: 100%;
+}
+
+.title {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 24px;
+}
+
+.swiper {
+  overflow: visible !important;
+  padding-bottom: 24px;
+}
+
+.swiperSlide {
+  width: 305px !important;
+  height: 244px;
+}
+
+@media (min-width: 769px) {
+  .swiperSlide {
+    width: 350px !important;
+    height: 300px;
+  }
+}
+
+@media (min-width: 1025px) {
+  .swiperSlide {
+    width: 488px !important;
+    height: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    margin-bottom: 15px;
+  }
+}
