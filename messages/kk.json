@@ -1,0 +1,84 @@
+{
+  "header": {
+    "links": {
+      "about": "О проекте",
+      "swap": "Свапнуть коин",
+      "referral": "Реферальная система",
+      "contacts": "Контакты"
+    },
+    "buttons": {
+      "connect": "Подключить кошелек"
+    }
+  },
+  "hero": {
+    "title": "Всеми любимый Barscoin",
+    "buttons": {
+      "connect": "Подключить Metamask",
+      "add": "Добавить токен"
+    }
+  },
+  "about": {
+    "title": "О проекте",
+    "description": "BarsCoin - инновационный образовательный токен, обеспечивающий доступ к криптоакадемии и экосистеме обучающих продуктов, где пользователи могут получать качественные знания в сфере криптовалют и блокчейна, а также пользоваться преимуществами растущей образовательной платформы с перспективой расширения продуктовой линейки."
+  },
+  "society": {
+    "title": "Присоединяйтесь к нашему",
+    "subtitle": "сообществу",
+    "participants": "Участники",
+    "ambassadors": "Амбассадоры",
+    "societies": "Многоязычные сообщества",
+    "instagram": "https://instagram.com",
+    "telegram": "https://t.me",
+    "twitter": "https://twitter.com"
+  },
+  "ecosystem": {
+    "title": "Экосистема токена",
+    "cards": {
+      "academy": {
+        "title": "Barsacademy",
+        "description": "barscoin academy to learn new thing about web3",
+        "button": "Перейти",
+        "button2": "Узнать больше",
+        "image": "/academy.png",
+        "link": "https://barscoin.academy"
+      },
+      "chatbot": {
+        "title": "Barschatbot",
+        "description": "All-in-one tokenization platform",
+        "button": "Перейти",
+        "image": "/chatbot.svg",
+        "link": "https://barscoin.academy"
+      },
+      "staking": {
+        "title": "Staking",
+        "description": "Stake your bars token",
+        "button": "Bars staking",
+        "image": "/staking.png",
+        "link": "https://barscoin.academy"
+      }
+    }
+  },
+  "buy": {
+    "title": "Где купить Barscoin",
+    "description": "BARSCOIN доступен более чем на 100 биржах по всему миру. Если вам нужна помощь с покупкой или хранением BARSCOIN, мы предлагаем круглосуточную поддержку в BRS Telegram.",
+    "description2": "Чтобы купить $BRS напрямую с помощью кредитной карты, вы можете воспользоваться этой услугой.",
+    "cex": "Лучшие биржи(CEX)",
+    "dex": "Лучшие свапы (DEX)",
+    "comingSoon": "Coming soon",
+    "learnMore": "Узнать больше",
+    "goTo": "Перейти"
+  },
+  "staking": {
+    "title": "Стейкинг. Зарабатывайте. Получайте награды.",
+    "description": "Ставьте свои BRS токены и зарабатывайте сестринский/наградной токен BRS, TOKEN.",
+    "button": "Staking",
+    "qantity": {
+      "title": "$210 МЛН+",
+      "description": "Staked"
+    },
+    "holders": {
+      "title": "460 000 +",
+      "description": "Holders"
+    }
+  }
+}
