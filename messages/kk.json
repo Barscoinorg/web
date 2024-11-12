@@ -80,5 +80,12 @@
       "title": "460 000 +",
       "description": "Holders"
     }
+  },
+  "swap": {
+    "title": "BRS TO USDT",
+    "description": "свапните токен в два клика что бы получить usdt",
+    "button": "Свапнуть",
+    "sell": "Продать",
+    "buy": "Купить"
   }
 }
