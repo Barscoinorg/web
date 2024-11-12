@@ -7,7 +7,7 @@ import { routing } from "@/i18n/routing";
 import { Providers } from "../providers";
 import "@rainbow-me/rainbowkit/styles.css";
 
-const manrope = localFont({
+export const manrope = localFont({
   src: [
     {
       path: "../fonts/Manrope-Bold.ttf",

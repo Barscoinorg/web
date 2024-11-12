@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import styles from "./header.module.css";
 import { useTranslations } from "next-intl";
@@ -5,9 +7,12 @@ import { Link } from "@/i18n/routing";
 import { useState } from "react";
 import { ConnectButtonCustom } from "@/shared/connect-button";
 
-export default function Header() {
+interface HeaderProps {
+  variant?: "light" | "dark";
+}
+
+export default function Header({ variant = "light" }: HeaderProps) {
   const t = useTranslations("header.links");
-  const tButtons = useTranslations("header.buttons");
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -16,10 +21,10 @@ export default function Header() {
   };
 
   return (
-    <div className={styles.header}>
+    <div className={`${styles.header} ${styles[`header_${variant}`]}`}>
       <div className={styles.header__container}>
         <Image
-          src="/barscoin.svg"
+          src={variant === "light" ? "/barscoin.svg" : "/barscoin_dark.svg"}
           alt="logo"
           width={157}
           height={26}
@@ -28,7 +33,7 @@ export default function Header() {
         <button
           className={`${styles.burger} ${
             isMenuOpen ? styles.burger_active : ""
-          }`}
+          } ${styles[`burger_${variant}`]}`}
           onClick={toggleMenu}>
           <span></span>
           <span></span>
@@ -38,11 +43,14 @@ export default function Header() {
           className={`${styles.header__mobile} ${
             isMenuOpen ? styles.header__mobile_active : ""
           }`}>
-          <div className={styles.header__links}>
+          <div
+            className={`${styles.header__links} ${
+              styles[`header__links_${variant}`]
+            }`}>
             <Link href="/" onClick={toggleMenu}>
               {t("about")}
             </Link>
-            <Link href="/" onClick={toggleMenu}>
+            <Link href="/swap" onClick={toggleMenu}>
               {t("swap")}
             </Link>
             <Link href="/" onClick={toggleMenu}>
@@ -53,12 +61,32 @@ export default function Header() {
             </Link>
           </div>
           <div className={styles.header__buttons}>
-            <ConnectButtonCustom buttonClassName={styles.header__connect} />
-            <button className={styles.header__user}>
-              <Image src="/user.svg" alt="user" width={28} height={28} />
+            <ConnectButtonCustom
+              buttonClassName={`${styles.header__connect} ${
+                styles[`header__connect_${variant}`]
+              }`}
+            />
+            <button
+              className={`${styles.header__user} ${
+                styles[`header__user_${variant}`]
+              }`}>
+              <Image
+                src={variant === "light" ? "/user.svg" : "/user_dark.svg"}
+                alt="user"
+                width={28}
+                height={28}
+              />
             </button>
-            <button className={styles.header__world}>
-              <Image src="/world.svg" alt="world" width={28} height={28} />
+            <button
+              className={`${styles.header__world} ${
+                styles[`header__world_${variant}`]
+              }`}>
+              <Image
+                src={variant === "light" ? "/world.svg" : "/world_dark.svg"}
+                alt="world"
+                width={28}
+                height={28}
+              />
             </button>
           </div>
         </div>

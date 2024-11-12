@@ -1,0 +1,132 @@
+.swap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  margin: 0 auto;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  line-height: 97%;
+}
+
+.subtitle {
+  text-align: center;
+  margin-bottom: 1rem;
+  color: #666;
+}
+
+.swapCard {
+  max-width: 40vw;
+  background: linear-gradient(180deg, #2c4dbb 0%, #142355 100%);
+  border-radius: 24px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+  position: relative;
+}
+
+.inputGroup {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  padding: 1rem;
+  color: white;
+}
+
+.inputTitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.inputWrapper {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.inputWrapper input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  font-size: 1.5rem;
+  color: white;
+  outline: none;
+  font-size: 40px;
+  width: 80%;
+}
+
+.inputWrapper input::-webkit-outer-spin-button,
+.inputWrapper input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.inputWrapper input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.tokenButton {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: transparent;
+  border: 1px solid #fff;
+  padding: 0.5rem;
+  border-radius: 37px;
+  color: white;
+  cursor: pointer;
+}
+
+.tokenIconWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 41px;
+  height: 41px;
+  background: white;
+  border-radius: 50%;
+}
+
+.tokenSymbol {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.switchButton {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.usdValue {
+  font-size: 1.25rem;
+  color: #ababab;
+}
+
+.connectButton {
+  margin-top: 1rem;
+  width: 100%;
+  padding: 1rem;
+  border-radius: 12px;
+  background: #2c4dbb;
+  color: white;
+  border: none;
+  font-size: 1.75rem;
+  cursor: pointer;
+}

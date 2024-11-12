@@ -95,11 +95,37 @@
   transform: translateY(50%) rotate(-45deg);
 }
 
+.burger_active span {
+  background-color: #1e1e1e;
+}
+
 .header__mobile {
   width: 80%;
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+.header_dark {
+  color: #1e1e1e;
+}
+
+.header__links_dark a {
+  color: #1e1e1e;
+}
+
+.header__connect_dark {
+  background-color: #1e1e1e;
+  color: #ffffff;
+}
+
+.header__user_dark,
+.header__world_dark {
+  background-color: #1e1e1e;
+}
+
+.burger_dark span {
+  background-color: #1e1e1e;
 }
 
 @media (max-width: 1280px) {
