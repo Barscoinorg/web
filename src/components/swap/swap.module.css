@@ -2,7 +2,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-
   margin: 0 auto;
 }
 
@@ -82,16 +81,6 @@
   cursor: pointer;
 }
 
-.tokenIconWrapper {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 41px;
-  height: 41px;
-  background: white;
-  border-radius: 50%;
-}
-
 .tokenSymbol {
   font-size: 1.5rem;
   font-weight: 600;
@@ -129,4 +118,39 @@
   border: none;
   font-size: 1.75rem;
   cursor: pointer;
+}
+
+@media (max-width: 1024px) {
+  .swapCard {
+    max-width: 50vw;
+  }
+}
+
+@media (max-width: 768px) {
+  .swapCard {
+    max-width: 90vw;
+  }
+}
+
+@media (max-width: 480px) {
+  .connectButton {
+    font-size: 1.25rem;
+  }
+
+  .tokenSymbol {
+    font-size: 1.25rem;
+  }
+
+  .inputTitle {
+    font-size: 1.25rem;
+  }
+
+  .inputWrapper input {
+    font-size: 2rem;
+  }
+
+  .tokenIcon {
+    width: 30px;
+    height: 30px;
+  }
 }

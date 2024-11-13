@@ -6,6 +6,7 @@ import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
 import { Providers } from "../providers";
 import "@rainbow-me/rainbowkit/styles.css";
+import favicon from "./favicon.ico";
 
 export const manrope = localFont({
   src: [
@@ -31,6 +32,9 @@ export const manrope = localFont({
 export const metadata: Metadata = {
   title: "Barscoin",
   description: "Barscoin",
+  icons: {
+    icon: [{ url: favicon.src }],
+  },
 };
 
 export default async function RootLayout({

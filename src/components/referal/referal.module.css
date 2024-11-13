@@ -1,0 +1,261 @@
+.referal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin: 2vh 0;
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: 700;
+  text-align: center;
+  line-height: 97%;
+  color: white;
+  margin-bottom: 2rem;
+}
+
+.subtitle {
+  font-size: 1rem;
+  text-align: center;
+  color: #e5f1ff;
+  margin-bottom: 1.5rem;
+}
+
+.referalContainer {
+  width: 100%;
+  max-width: 80vw;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.referalCard {
+  background: linear-gradient(180deg, #2c4dbb 0%, #142355 100%);
+  border-radius: 24px;
+  padding: 2.75rem 1.75rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.linkWrapper {
+  display: flex;
+  gap: 15px;
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 1rem;
+  min-width: 60%;
+  margin-bottom: 1.5rem;
+}
+
+.linkInput {
+  flex: 1;
+  background: transparent;
+  border: none;
+  color: #1e1e1e;
+  font-size: 1.125rem;
+  outline: none;
+}
+
+.copyButton {
+  background: #e5f1ff;
+  border: none;
+  border-radius: 11px;
+  color: #2d2e30;
+  padding: 13px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.copyButton:hover {
+  background: #2c4dbb;
+  opacity: 0.8;
+  color: #fff;
+}
+
+.statsWrapper {
+  width: 100%;
+  display: flex;
+  gap: 20px;
+}
+
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.statsCard {
+  background: #e5f1ff;
+  border-radius: 16px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+}
+
+.statsIcon {
+  color: #1e1e1e;
+  font-weight: 700;
+  font-size: 3.75rem;
+  line-height: 97%;
+}
+
+.statsLabel {
+  color: #1e1e1e;
+  font-size: 1.125rem;
+}
+
+.earnedCard {
+  background: linear-gradient(180deg, #2c4dbb 0%, #142355 100%);
+  border-radius: 16px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.earnedInfo {
+  flex: 1;
+}
+
+.earnedValue {
+  display: block;
+  font-size: 32px;
+  color: #fff;
+  font-weight: 700;
+}
+
+.earnedLabel {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 1.125rem;
+}
+
+.claimButton {
+  background: #2c4dbb;
+  border: none;
+  border-radius: 12px;
+  color: #fff;
+  padding: 12px 30px;
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.claimButton:hover {
+  background: #3557c7;
+}
+
+.historyCard {
+  background: linear-gradient(180deg, #333333 0%, #000000 100%);
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 2rem;
+}
+
+.historyTitle {
+  color: #fff;
+  font-size: 1.125rem;
+  margin-bottom: 20px;
+}
+
+.historyList {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.historyItem {
+  display: flex;
+  justify-content: space-between;
+  color: #fff;
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.historyDate {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.historyAmount {
+  font-weight: 600;
+}
+
+@media (max-width: 1024px) {
+  .title {
+    font-size: 3rem;
+  }
+
+  .statsGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 2rem;
+    text-align: left;
+  }
+
+  .statsIcon {
+    font-size: 2rem;
+  }
+
+  .statsLabel {
+    font-size: 1rem;
+  }
+
+  .statsCard {
+    padding: 1rem;
+  }
+
+  .subtitle {
+    font-size: 14px;
+    text-align: left;
+  }
+
+  .referalCard {
+    padding: 20px;
+  }
+
+  .earnedCard {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .claimButton {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 30px;
+  }
+
+  .statsIcon {
+    width: 60px;
+    height: 60px;
+    font-size: 24px;
+  }
+
+  .statsValue {
+    font-size: 36px;
+  }
+
+  .earnedValue {
+    font-size: 28px;
+  }
+}

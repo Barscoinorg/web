@@ -5,7 +5,7 @@ import { routing } from "@/i18n/routing";
 import { Providers } from "../../providers";
 import "@rainbow-me/rainbowkit/styles.css";
 
-export default async function SwapLayout({
+export default async function ReferalLayout({
   children,
   params,
 }: {
