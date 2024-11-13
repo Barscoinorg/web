@@ -4,7 +4,7 @@
       "about": "О проекте",
       "swap": "Свапнуть коин",
       "referral": "Реферальная система",
-      "contacts": "Контакты"
+      "contacts": "Сообщество"
     },
     "buttons": {
       "connect": "Подключить кошелек"
@@ -97,5 +97,30 @@
     "claimHistory": "История выплат",
     "youEarned": "Вы заработали",
     "claim": "Вывести токены"
+  },
+  "auth": {
+    "register": {
+      "title": "Новый аккаунт",
+      "name": "Имя",
+      "email": "Email",
+      "password": "Пароль",
+      "confirmPassword": "Подтвердите пароль",
+      "button": "Начать",
+      "signin": "Войти",
+      "signin_description": "Уже есть аккаунт?",
+      "terms": "Условия использования",
+      "terms_description": "Вы согласились с нашими",
+      "terms_description2": "когда продолжите"
+    },
+    "login": {
+      "title": "Добро пожаловать",
+      "subtitle": "Войдите в ваш аккаунт",
+      "email": "Email",
+      "password": "Пароль",
+      "button": "Войти",
+      "forgot": "Забыли пароль?",
+      "signup": "Создать аккаунт",
+      "signup_description": "Нет аккаунта?"
+    }
   }
 }

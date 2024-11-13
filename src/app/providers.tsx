@@ -12,6 +12,8 @@ import {
   coinbaseWallet,
   trustWallet,
   rabbyWallet,
+  braveWallet,
+  compassWallet,
 } from "@rainbow-me/rainbowkit/wallets";
 
 const wallets = [
@@ -24,6 +26,8 @@ const wallets = [
       coinbaseWallet,
       trustWallet,
       rabbyWallet,
+      braveWallet,
+      compassWallet,
     ],
   },
 ];
@@ -32,6 +36,7 @@ const config = getDefaultConfig({
   appName: "Barscoin",
   projectId: "64ad1c5c91c39f4d9d88ba184d6e8e89",
   chains: [mainnet, bsc],
+  multiInjectedProviderDiscovery: false,
   ssr: true,
   wallets: wallets,
 });

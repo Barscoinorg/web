@@ -7,6 +7,7 @@ import { routing } from "@/i18n/routing";
 import { Providers } from "../providers";
 import "@rainbow-me/rainbowkit/styles.css";
 import favicon from "./favicon.ico";
+import { createUsersTable } from "@/db";
 
 export const manrope = localFont({
   src: [

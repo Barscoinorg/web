@@ -56,7 +56,7 @@ export default function Header({ variant = "light" }: HeaderProps) {
             <Link href="/referal" onClick={toggleMenu}>
               {t("referral")}
             </Link>
-            <Link href="/" onClick={toggleMenu}>
+            <Link href="/society" onClick={toggleMenu}>
               {t("contacts")}
             </Link>
           </div>
