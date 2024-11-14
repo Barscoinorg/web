@@ -1,11 +1,12 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import styles from "./login.module.css";
 import { useTranslations } from "next-intl";
-import { login } from "@/actions";
+import { getSession, login } from "@/actions";
 import { useActionState } from "react";
+import { redirect } from "next/navigation";
 
 export default function Login() {
   const t = useTranslations("auth.login");
@@ -13,6 +14,17 @@ export default function Login() {
     email: "",
     password: "",
   });
+
+  useEffect(() => {
+    const checkSession = async () => {
+      const session = await getSession();
+      if (session.isLoggedIn) {
+        redirect("/");
+      }
+    };
+    checkSession();
+  }, []);
+
   const [state, formAction, isPending] = useActionState(
     async (prevState: { error: string } | null, formData: FormData) => {
       return login(formData);
