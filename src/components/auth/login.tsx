@@ -1,35 +1,49 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import Link from "next/link";
+import { Link, useRouter } from "@/i18n/routing";
 import styles from "./login.module.css";
 import { useTranslations } from "next-intl";
-import { getSession, login } from "@/actions";
+import { login } from "@/actions";
 import { useActionState } from "react";
-import { redirect } from "next/navigation";
+
+import { useSessionStore } from "@/store/session";
+
+interface LoginState {
+  error?: string;
+  isLoggedIn?: boolean;
+  email?: string;
+  username?: string;
+}
 
 export default function Login() {
   const t = useTranslations("auth.login");
+  const router = useRouter();
   const [formData, setFormData] = useState({
     email: "",
     password: "",
   });
+  const { isLoggedIn } = useSessionStore();
 
   useEffect(() => {
     const checkSession = async () => {
-      const session = await getSession();
-      if (session.isLoggedIn) {
-        redirect("/");
+      if (isLoggedIn) {
+        router.push("/");
       }
     };
     checkSession();
-  }, []);
+  }, [isLoggedIn, router]);
 
-  const [state, formAction, isPending] = useActionState(
-    async (prevState: { error: string } | null, formData: FormData) => {
-      return login(formData);
+  const [state, formAction, isPending] = useActionState<LoginState, FormData>(
+    async (state: LoginState, formData: FormData) => {
+      const result = await login(formData);
+      if (result.isLoggedIn) {
+        useSessionStore.getState().setSession(result);
+        router.push("/");
+      }
+      return result;
     },
-    null
+    { error: "", isLoggedIn: false, email: "", username: "" }
   );
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {

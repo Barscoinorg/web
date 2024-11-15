@@ -45,13 +45,17 @@ export async function login(formData: FormData) {
     return { error: "Wrong Credentials!" };
   }
 
-  // You can pass any information you want
   session.isLoggedIn = true;
   session.email = user.email;
   session.username = user.username;
 
   await session.save();
-  redirect("/");
+
+  return {
+    isLoggedIn: true,
+    email: user.email,
+    username: user.username,
+  };
 }
 
 export async function register(formData: FormData) {
@@ -82,11 +86,15 @@ export async function register(formData: FormData) {
   session.username = user.username;
 
   await session.save();
-  redirect("/");
+  return {
+    isLoggedIn: true,
+    email: user.email,
+    username: user.username,
+  };
 }
 
 export async function logout() {
   const session = await getSession();
   session.destroy();
-  redirect("/login");
+  return { success: true };
 }

@@ -4,9 +4,12 @@ import Image from "next/image";
 import styles from "./hero.module.css";
 import { useTranslations } from "next-intl";
 import { ConnectButtonCustom } from "@/shared/connect-button";
+import { useSessionStore } from "@/store/session";
+import { Link } from "@/i18n/routing";
 
 export default function Hero() {
   const t = useTranslations("hero");
+  const { isLoggedIn } = useSessionStore();
 
   return (
     <div className={styles.hero}>
@@ -39,12 +42,30 @@ export default function Hero() {
         </div>
       </div>
       <div className={styles.hero__buttons_wrapper}>
-        <ConnectButtonCustom
-          buttonClassName={`${styles.hero__connect} ${styles.hero__button}`}
-        />
-        <button className={`${styles.hero__add} ${styles.hero__button}`}>
-          {t("buttons.add")}
-        </button>
+        {isLoggedIn ? (
+          <>
+            <ConnectButtonCustom
+              buttonClassName={`${styles.hero__connect} ${styles.hero__button}`}
+            />
+            <button className={`${styles.hero__add} ${styles.hero__button}`}>
+              {t("buttons.add")}
+            </button>
+          </>
+        ) : (
+          <>
+            <Link href="/login">
+              <button
+                className={`${styles.hero__connect} ${styles.hero__button}`}>
+                {t("buttons.login")}
+              </button>
+            </Link>
+            <Link href="/register">
+              <button className={`${styles.hero__add} ${styles.hero__button}`}>
+                {t("buttons.register")}
+              </button>
+            </Link>
+          </>
+        )}
       </div>
     </div>
   );

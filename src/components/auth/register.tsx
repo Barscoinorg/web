@@ -1,24 +1,42 @@
 "use client";
 
 import { useState } from "react";
-import Link from "next/link";
+import { Link, useRouter } from "@/i18n/routing";
+
 import styles from "./register.module.css";
 import { useTranslations } from "next-intl";
 import { register } from "@/actions";
 import { useActionState } from "react";
+import { useSessionStore } from "@/store/session";
+
+interface RegisterState {
+  error?: string;
+  isLoggedIn?: boolean;
+  email?: string;
+  username?: string;
+}
 
 export default function Register() {
   const t = useTranslations("auth");
+  const router = useRouter();
   const [formData, setFormData] = useState({
     username: "",
     email: "",
     password: "",
   });
-  const [state, formAction, isPending] = useActionState(
-    async (prevState: { error: string } | null, formData: FormData) => {
-      return register(formData);
+  const [state, formAction, isPending] = useActionState<
+    RegisterState,
+    FormData
+  >(
+    async (state: RegisterState, formData: FormData) => {
+      const result = await register(formData);
+      if (result.isLoggedIn) {
+        useSessionStore.getState().setSession(result);
+        router.push("/");
+      }
+      return result;
     },
-    null
+    { error: "", isLoggedIn: false, email: "", username: "" }
   );
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
