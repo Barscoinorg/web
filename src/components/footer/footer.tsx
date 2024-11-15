@@ -12,7 +12,7 @@ export default function Footer() {
     <footer className={styles.footer}>
       <div className={styles.footer__content}>
         <div className={styles.footer__left}>
-          <Image src="/barscoin.svg" alt="logo" width={148} height={26} />
+          <Image src="/Barscoin.svg" alt="logo" width={148} height={26} />
           <p className={styles.footer__copyright}>© 2024 Barscoin</p>
         </div>
         <div className={styles.footer__right}>

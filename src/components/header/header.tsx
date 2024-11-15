@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import styles from "./header.module.css";
-import { useTranslations, useLocale } from "next-intl";
+import { useTranslations } from "next-intl";
 import { Link, useRouter } from "@/i18n/routing";
 
 import { useState } from "react";
@@ -17,7 +17,7 @@ interface HeaderProps {
 
 export default function Header({ variant = "light" }: HeaderProps) {
   const t = useTranslations("header.links");
-  const locale = useLocale();
+
   const router = useRouter();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [showUserTooltip, setShowUserTooltip] = useState(false);
@@ -31,7 +31,7 @@ export default function Header({ variant = "light" }: HeaderProps) {
     <div className={`${styles.header} ${styles[`header_${variant}`]}`}>
       <div className={styles.header__container}>
         <Image
-          src={variant === "light" ? "/barscoin.svg" : "/barscoin_dark.svg"}
+          src={variant === "light" ? "/Barscoin.svg" : "/barscoin_dark.svg"}
           alt="logo"
           width={157}
           height={26}
